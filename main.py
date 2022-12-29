@@ -1,3 +1,4 @@
+"""Import random and typing."""
 from random import randint
 from typing import Optional
 
@@ -5,6 +6,7 @@ from graphic_arts.start_game_banner import run_screensaver
 
 
 def attack(char_name: str, char_class: str) -> str:
+    """Receive name and class.Return damage."""
     if char_class == 'warrior':
         return (
             f'{char_name} нанёс урон '
@@ -21,6 +23,7 @@ def attack(char_name: str, char_class: str) -> str:
 
 
 def defence(char_name: str, char_class: str) -> str:
+    """Receive name and class.Return Defence."""
     if char_class == 'warrior':
         return (
             f'{char_name} блокировал '
@@ -37,6 +40,7 @@ def defence(char_name: str, char_class: str) -> str:
 
 
 def special(char_name: str, char_class: str) -> str:
+    """Receive name and class.Return Specials."""
     if char_class == 'warrior':
         return (
             f'{char_name} применил специальное умение '
@@ -53,6 +57,7 @@ def special(char_name: str, char_class: str) -> str:
 
 
 def start_training(char_name: str, char_class: str) -> str:
+    """Receive name and class.Return Defenition."""
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — отличный боец ближнего боя.')
     if char_class == 'mage':
@@ -78,6 +83,7 @@ def start_training(char_name: str, char_class: str) -> str:
 
 
 def choice_char_class() -> Optional[str]:
+    """Receive class.Return Defenition."""
     approve_choice: Optional[str] = None
     char_class: Optional[str] = None
     while approve_choice != 'y':
@@ -103,6 +109,7 @@ def choice_char_class() -> Optional[str]:
 
 
 def main():
+    """Receive Name.Return Defenition."""
     run_screensaver()
     print('Приветствую тебя, искатель приключений!')
     print('Прежде чем начать игру...')
